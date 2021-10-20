@@ -36,8 +36,8 @@ public class Libro {
     }
     
     
-    public void setAutor (String autor1){
-    autor = autor1;
+    public void setAutor (String autor){
+    autor = autor;
     }
     
      public String getAutor(String autor){
