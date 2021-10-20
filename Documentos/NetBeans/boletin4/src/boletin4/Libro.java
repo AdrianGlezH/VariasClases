@@ -11,27 +11,30 @@ package boletin4;
  */
 public class Libro {
     //atributos
-    String titulo, autor;
-    int ano;
-    short numPaginas;
-    float valoracion;
+    private String titulo, autor;
+    private int ano;
+    private short numPaginas;
+    private float valoracion;
     
-    //metodos       
-    public Libro(){             //por defecto
+    //metodo por defecto      
+    public Libro(){             
     }           
     
+    //constructor paarametrizado
+    
     public  Libro(String titulo1, String autor1, int ano1, short numPaginas1){
-        titulo1 = titulo;
-        autor1 = autor;
-        ano1= ano;
-        numPaginas1 = numPaginas;
+        titulo=titulo1;
+        autor=autor1;       //sobrecarga del constructor, tituloo va a recibir a titulo1
+        ano=ano1;           //this.ano=ano  lo q recibo en ano lo pasa a this.ano
+        numPaginas=numPaginas1;
     }
+    //métodos de acceso
     
     public void setTitulo (String titulo1){
     titulo = titulo1;
     }
     
-    public String getTitulo(String titulo){
+    public String getTitulo(){
     return titulo;
     }
     
@@ -40,7 +43,7 @@ public class Libro {
     autor = autor;
     }
     
-     public String getAutor(String autor){
+     public String getAutor(){
     return autor;
      }
 
@@ -48,7 +51,7 @@ public class Libro {
     ano = ano;
     }
 
-     public int getAno(int ano){
+     public int getAno(){
      return ano;    
     }
      
@@ -56,17 +59,17 @@ public class Libro {
     numPaginas = numPaginas;
     }
     
-    public short getnumPaginas (short numPaginas){
+    public short getnumPaginas (){
     return numPaginas;
     }
     
-    public void amosar(Libro obxlibro2){
+    public void amosar(){
         
-       System.out.println("autor" + obxlibro2.getTitulo(autor) + "ano" + obxlibro2.getAno(ano) + "número de páginas" + obxlibro2.getnumPaginas(numPaginas) );
-        
+       //System.out.println("autor" + obxlibro2.getTitulo(autor) + "ano" + obxlibro2.getAno(ano) + "número de páginas" + obxlibro2.getnumPaginas(numPaginas) );
+        System.out.println("titulo"  + titulo +  "\n autor"  + autor  +  "\n ano"  + ano +  "n/ numPaginas"  +  numPaginas );  
     }                                                                          //4 metodo amosar non devolve nada e visualiza caracteristicas libro
 
-  
+    
 
 
 }
